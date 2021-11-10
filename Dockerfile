@@ -9,5 +9,5 @@ RUN echo '/usr/sbin/sshd -D' >>/1.sh
 RUN echo 'PermitRootLogin yes' >>  /etc/ssh/sshd_config 
 RUN echo root:yuehua|chpasswd
 RUN chmod 755 /1.sh
-EXPOSE 80
+EXPOSE 443
 CMD  /1.sh
