@@ -1,9 +1,8 @@
 FROM ubuntu
 RUN apt update
-RUN apt install ssh -y
-RUN apt install wget -y
+RUN apt install ssh wget -y
 RUN apt install npm -y
-RUN  npm install -g wstunnel
+RUN npm install -g wstunnel
 RUN mkdir /run/sshd 
 RUN echo 'wstunnel -s 0.0.0.0:80 &' >>/1.sh
 RUN echo '/usr/sbin/sshd -D' >>/1.sh
